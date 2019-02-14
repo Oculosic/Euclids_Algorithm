@@ -1,21 +1,19 @@
 import java.util.ArrayList;
 
-public  class Algorithm {
-    static int r = 1;
-    static int s = 0;
-    static int t = 0;
-    static boolean swap = false;
-    public static void calculate(int a, int b){
+class Algorithm {
+    private static int r = 1;
+    private static int s = 0;
+    private static int t = 0;
+
+    static void calculate(int a, int b){
+        boolean swap = false;
         if(a < b) {
             a = a + b;
             b = a - b;
             a = a - b;
             swap = true;
         }
-        else{
-            swap = false;
-        }
-        ArrayList<Integer> qValues = new ArrayList();
+        ArrayList<Integer> qValues = new ArrayList<>();
         int origA = a;
         int origB = b;
         if(a % b != 0) {
@@ -51,8 +49,8 @@ public  class Algorithm {
 
         t = r-origA*s;
         t = t/origB;
-        System.out.println("Swap: "+swap);
-        if(swap == true){
+        System.out.println("Swap: "+ swap);
+        if(swap){
             s = s + t;
             t = s - t;
             s = s - t;
@@ -61,15 +59,15 @@ public  class Algorithm {
         System.out.println("qsize: "+qValues.size());
     }
     
-    public static int getR(){
+    static int getR(){
         System.out.println("r: "+r);
         return r;
     }
-    public static int getS(){
+    static int getS(){
         System.out.println("s: "+s);
         return s;
     }
-    public static int getT(){
+    static int getT(){
         System.out.println("t: "+t);
         return t;
     }

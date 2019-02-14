@@ -1,5 +1,18 @@
 .root{
--fx-font-size: 24px;
--fx-font-family: Helvetica;
--fx-alignment: center;
+    -fx-font-size: 24px;
+    -fx-font-family: Helvetica;
+    -fx-alignment: center;
+}
+#pane{
+    -fx-background-color: #38393d;
+}
+.text{
+    -fx-text-fill: #caccd0;
+}
+#GO{
+    -fx-background-color: #5c5d62;
+    -fx-text-fill: #caccd0;
+}
+.tField{
+    -fx-background-color: #2d2f33;
 }
